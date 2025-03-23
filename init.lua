@@ -685,6 +685,9 @@ require('lazy').setup({
             },
           },
         },
+        harper_ls = {
+          filetypes = { 'markdown' },
+        },
       }
 
       -- Ensure the servers and tools above are installed
