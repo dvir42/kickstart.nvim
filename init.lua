@@ -128,6 +128,13 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- Spaces vs tabs
+vim.opt.shiftwidth = 4
+vim.opt.smarttab = true
+vim.opt.expandtab = true
+vim.opt.tabstop = 8
+vim.opt.softtabstop = 0
+
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
 
@@ -1060,6 +1067,17 @@ require('lazy').setup({
     lazy = false,
     init = function()
       vim.g.vimtex_view_method = 'zathura'
+    end,
+  },
+
+  {
+    'julienvincent/nvim-paredit',
+    config = function()
+      require('nvim-paredit').setup {
+        indent = {
+          enabled = true,
+        },
+      }
     end,
   },
 
